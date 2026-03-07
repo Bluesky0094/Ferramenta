@@ -256,7 +256,7 @@
       compact ? "" : '    <p class="use-case"><strong>Uso consigliato:</strong> ' + product.use_case + "</p>",
       '    <div class="product-footer">',
       '      <span class="availability">' + product.availability + "</span>",
-      '      <a class="text-link" href="index.html#preventivo">Richiedi info</a>',
+      '      <a class="text-link action-link" href="index.html#preventivo">Richiedi info</a>',
       "    </div>",
       "  </div>",
       "</article>",

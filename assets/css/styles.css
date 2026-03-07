@@ -427,9 +427,32 @@ button {
   transition: transform 180ms ease, color 180ms ease;
 }
 
+.action-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.78rem 1.05rem;
+  border: 1px solid rgba(217, 204, 182, 0.95);
+  border-radius: 999px;
+  background: rgba(255, 250, 241, 0.92);
+  box-shadow: 0 8px 18px rgba(35, 31, 19, 0.06);
+}
+
+.section-action-link {
+  flex-shrink: 0;
+  padding: 0.95rem 1.3rem;
+  white-space: nowrap;
+}
+
 .text-link:hover,
 .text-link:focus-visible {
   color: #8b5900;
+}
+
+.action-link:hover,
+.action-link:focus-visible {
+  border-color: rgba(215, 145, 0, 0.38);
+  background: #fffdf8;
+  box-shadow: 0 14px 24px rgba(35, 31, 19, 0.09);
 }
 
 .category-grid {
@@ -933,6 +956,10 @@ button {
 
   .filter-row {
     justify-content: flex-start;
+  }
+
+  .section-action-link {
+    white-space: normal;
   }
 }
 
