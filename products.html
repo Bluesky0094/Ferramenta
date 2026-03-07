@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalogo Prodotti | Ferratek Utensili</title>
+    <meta
+      name="description"
+      content="Catalogo Ferratek Utensili con trapani, avvitatori, fissaggio e soluzioni storage per professionisti."
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="products">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Ferratek Utensili">
+          <span class="brand-mark">FT</span>
+          <span class="brand-copy">
+            <strong>Ferratek</strong>
+            <span>Utensili professionali</span>
+          </span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Apri menu di navigazione"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Navigazione principale">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link is-current" href="products.html">Prodotti</a>
+          <a class="nav-link" href="index.html#servizi">Servizi</a>
+          <a class="nav-link" href="index.html#preventivo">Preventivo</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="catalog-hero">
+        <div class="container catalog-hero-layout">
+          <div class="catalog-copy" data-reveal>
+            <p class="eyebrow">Catalogo essenziale per uso professionale</p>
+            <h1>Prodotti selezionati per lavori intensivi, montaggio e logistica di cantiere.</h1>
+            <p>
+              Ogni articolo presenta specifiche utili all'acquisto: alimentazione,
+              motore, peso operativo, prestazioni, batteria inclusa e kit fornito.
+            </p>
+          </div>
+          <figure class="catalog-hero-figure" data-reveal>
+            <img
+              src="images/prodotti/DeWalt-Power-Tools-2783511057.png"
+              alt="Banco espositivo di elettroutensili professionali"
+              loading="eager"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section-shell catalog-section">
+        <div class="container catalog-shell">
+          <div class="catalog-toolbar">
+            <div class="catalog-toolbar-copy">
+              <p class="eyebrow">Filtra per reparto</p>
+              <h2>Catalogo Ferratek</h2>
+              <p id="catalog-status" class="catalog-status"></p>
+            </div>
+            <div id="catalog-filters" class="filter-row" aria-label="Filtri prodotto"></div>
+          </div>
+          <div id="product-grid" class="product-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>Ferratek Utensili</strong>
+          <p>Catalogo demo per elettroutensili e storage professionale.</p>
+        </div>
+        <div class="footer-note">
+          <p><span id="current-year"></span> Ferratek Utensili</p>
+          <small>Sito demo realizzato a scopo portfolio per presentazione servizi web.</small>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/products.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
