@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body data-page="home">
+    <a class="skip-link" href="#main-content">Salta al contenuto</a>
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="Ferratek Utensili">
@@ -40,7 +41,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero-section">
         <div class="container hero-layout">
           <div class="hero-copy" data-reveal>
@@ -54,6 +55,11 @@
             <div class="hero-actions">
               <a class="button button-primary" href="products.html">Scopri il catalogo</a>
               <a class="button button-secondary" href="#preventivo">Richiedi un preventivo</a>
+            </div>
+            <div class="quick-actions" aria-label="Azioni rapide">
+              <a href="tel:+390294751180">Chiama ora</a>
+              <a href="mailto:preventivi@ferratekutensili.it">Invia email</a>
+              <a href="products.html">Catalogo</a>
             </div>
             <div class="hero-metrics">
               <article>
@@ -234,6 +240,11 @@
         </div>
       </section>
     </main>
+
+    <nav class="mobile-cta-bar" aria-label="Azioni rapide mobile">
+      <a href="products.html">Catalogo</a>
+      <a class="mobile-cta-primary" href="index.html#preventivo">Preventivo</a>
+    </nav>
 
     <footer class="site-footer">
       <div class="container footer-inner">
