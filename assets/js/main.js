@@ -68,6 +68,51 @@
     });
   }
 
+  function initActiveNav() {
+    var links = Array.from(document.querySelectorAll(".site-nav .nav-link"));
+    if (!links.length) {
+      return;
+    }
+
+    function syncActiveLink() {
+      var page = document.body.getAttribute("data-page");
+      var hash = window.location.hash;
+      var activeLink = null;
+
+      links.forEach(function (link) {
+        link.classList.remove("is-current");
+        link.removeAttribute("aria-current");
+      });
+
+      if (page === "home" && (hash === "#servizi" || hash === "#preventivo")) {
+        activeLink = links.find(function (link) {
+          return new URL(link.href, window.location.href).hash === hash;
+        });
+      }
+
+      if (!activeLink && page === "products") {
+        activeLink = links.find(function (link) {
+          return link.getAttribute("href") === "products.html";
+        });
+      }
+
+      if (!activeLink) {
+        activeLink = links.find(function (link) {
+          var href = link.getAttribute("href");
+          return href === "index.html" || href === "index.html#top";
+        });
+      }
+
+      if (activeLink) {
+        activeLink.classList.add("is-current");
+        activeLink.setAttribute("aria-current", hash ? "location" : "page");
+      }
+    }
+
+    syncActiveLink();
+    window.addEventListener("hashchange", syncActiveLink);
+  }
+
   function updateFilterButtons(activeCategory) {
     var buttons = document.querySelectorAll(".filter-chip");
 
@@ -247,6 +292,23 @@
         return;
       }
 
+      var formData = new FormData(form);
+      var subject = "Richiesta preventivo Ferratek Utensili";
+      var body = [
+        "Nome e cognome: " + formData.get("name"),
+        "Email: " + formData.get("email"),
+        "Telefono: " + formData.get("phone"),
+        "Citta': " + formData.get("city"),
+        "",
+        "Richiesta:",
+        formData.get("message"),
+      ].join("\n");
+
+      window.location.href = "mailto:preventivi@ferratekutensili.it?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(body);
+
       form.reset();
       fields.forEach(clearFieldState);
       if (successMessage) {
@@ -260,6 +322,7 @@
 
     setCurrentYear();
     initMobileNav();
+    initActiveNav();
     initQuoteForm();
 
     if (page === "home") {
