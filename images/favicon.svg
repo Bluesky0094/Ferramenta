@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cantiere 24">
+  <rect width="64" height="64" rx="8" fill="#090909"/>
+  <path d="M29 14H14v36h15v-8h-7V22h7zM37 14h13v21H37v7h13v8H29V27h13v-5h-5z" fill="#ff5a1f"/>
+  <path d="M34 8 22 56" stroke="#168cff" stroke-width="5"/>
+</svg>
